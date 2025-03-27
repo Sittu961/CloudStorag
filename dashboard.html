@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h1>Cloud Storage</h1>
+            <a href="#" data-tag="" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="#" data-tag="Documents"><i class="fas fa-file-alt"></i> Documents</a>
+            <a href="#" data-tag="Images"><i class="fas fa-image"></i> Images</a>
+            <a href="#" data-tag="Media"><i class="fas fa-video"></i> Media</a>
+            <a href="#" data-tag="Others"><i class="fas fa-ellipsis-h"></i> Others</a>
+        </div>
+        <div class="main-content">
+            <header>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button id="uploadBtn" class="icon-btn"><i class="fas fa-cloud-upload-alt"></i> Upload</button>
+                <input type="file" id="fileInput" multiple style="display: none;">
+                <button id="logoutBtn" class="icon-btn"><i class="fas fa-sign-out-alt"></i></button>
+            </header>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="circle">
+                        <span id="storagePercent">0%</span>
+                        <p>0 Bytes / 2GB</p>
+                    </div>
+                    <p>Available Storage</p>
+                </div>
+                <div class="stat-card" data-tag="Documents">
+                    <i class="fas fa-file-alt"></i>
+                    <p>0 Bytes</p>
+                    <p>Documents</p>
+                </div>
+                <div class="stat-card" data-tag="Images">
+                    <i class="fas fa-image"></i>
+                    <p>0 Bytes</p>
+                    <p>Images</p>
+                </div>
+                <div class="stat-card" data-tag="Media">
+                    <i class="fas fa-video"></i>
+                    <p>0 Bytes</p>
+                    <p>Media</p>
+                </div>
+                <div class="stat-card" data-tag="Others">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <p>0 Bytes</p>
+                    <p>Others</p>
+                </div>
+            </div>
+            <div class="file-section">
+                <h3>Recent Files Uploaded</h3>
+                <ul id="fileList"></ul>
+            </div>
+            <div id="fileModal" class="modal hidden">
+                <div class="modal-content">
+                    <span id="modalClose" class="modal-close">×</span>
+                    <div id="modalInfo"></div>
+                </div>
+            </div>
+            <div id="spinner" class="spinner hidden"></div>
+        </div>
+    </div>
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

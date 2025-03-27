@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simple Cloud Storage</h1>
+    <div id="authSection">
+        <p id="authStatus">Not logged in</p>
+        <div id="loginForm">
+            <input type="email" id="emailInput" placeholder="Email (e.g., yourname@gmail.com)">
+            <input type="password" id="passwordInput" placeholder="Password">
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+        </div>
+        <button id="logoutBtn" class="hidden">Logout</button>
+    </div>
+    <input type="file" id="fileInput" multiple>
+    <button onclick="uploadFile()">Upload File</button>
+    <div id="uploadProgress" class="hidden"></div>
+    <div id="spinner" class="spinner hidden"></div>
+    <h2>Uploaded Files</h2>
+    <input type="text" id="searchInput" placeholder="Search files...">
+    <div id="bulkActions" class="hidden">
+        <button id="deleteSelectedBtn">Delete Selected</button>
+        <button id="downloadSelectedBtn">Download Selected</button>
+    </div>
+    <ul id="fileList"></ul>
+    <script type="module" src="script.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Storage - Sign In</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="split-container">
+        <div class="branding">
+            <h1>Cloud Storage</h1>
+            <h2>Manage your files the best way</h2>
+            <p>This is a place where you can store all your documents.</p>
+            <div class="illustration">
+                <div class="folder">
+                    <div class="folder-tab"></div>
+                    <div class="file file1"></div>
+                    <div class="file file2"></div>
+                    <div class="file file3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form-section">
+            <h2>Sign In</h2>
+            <form id="authForm">
+                <div class="input-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="passwordInput">Password</label>
+                    <input type="password" id="passwordInput" placeholder="Enter your password" required>
+                </div>
+                <button type="button" id="authBtn">Sign In</button>
+            </form>
+            <p class="toggle-link">Don't have an account? <a href="signup.html">Sign Up</a></p>
+            <div id="spinner" class="spinner hidden"></div>
+            <div id="errorMessage" class="error hidden"></div>
+        </div>
+    </div>
+    <script type="module" src="auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "cloud-storage",
+  "version": "1.0.0",
+  "description": "Cloud storage app with Appwrite",
+  "scripts": {
+    "start": "parcel index.html dashboard.html --open"
+  },
+  "dependencies": {
+    "appwrite": "^15.0.0",
+    "parcel": "^2.12.0"
+  }
+}
